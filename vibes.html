@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap" rel="stylesheet">
         <title>Nuno Silva | Portfolio</title>  
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            <nav>
-                <a href="./index.html">About</a>
-                <a href="./vibes.html">ViBeS</a>
-                <a href="./experience.html">EXPerience</a>
-                <a href="./academics.html">Academics</a>
-                <a href="./contact.html">Contact</a>
-            </nav>
+            <div class="container">
+                <div class="navbar">
+                    <div id="navname">
+                        Nuno Silva
+                    </div>
+                    <nav>
+                        <a href="./index.html">About</a>
+                        <a href="./vibes.html">ViBeS</a>
+                        <a href="./experience.html">EXPerience</a>
+                        <a href="./academics.html">Academics</a>
+                        <a href="./contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
         </header>
         <main>
             <br>
-            <video width="750" autoplay controls>
-                <source src="./video.mp4" type="video/mp4">
-            </video>
-        </main>
-
+            <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+                <iframe width="720px" height="720px" src="https://www.youtube.com/embed/TlXAk6HvZBU?si=6mdayrZbncGIgiyd?autoplay=1&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>            
     </body>
 </html>

@@ -1,0 +1,38 @@
+.navbar {
+    width: 100hv;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    font-family: "Roboto", sans-serif;
+}
+
+#navname {
+    color: white;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border: 5px solid black;
+    height: 100px;
+}

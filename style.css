@@ -1,80 +1,162 @@
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-.container {
-    display: flex;
-    height: calc(100vh - 40px);
-}
-
-.profile {
-    width: 20%;
-    background-color: beige;
-    text-align: center;
-    border-radius: 20px;
-}
-
-.profile .name {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    letter-spacing: 3px;
-    font-size: 50px;
-}
-
-.profile-picture img{
-    border-radius: 50%;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px;
-}
-
-.profile .status {
-    font-style: italic;
-    font-size: 14px;
-}
-
-.right-side {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    height: 100vh;
 }
 
-.navbar {
-    height: 50px;
-    background-color: beige;
+/* Desktop */
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .profile {
+        flex: 1;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .playground {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        background-color: beige;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+        padding: 10px 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: beige;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .playground {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+        background-color: beige;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+        padding: 10px 0;
+    }
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-style: italic;
+    color: gray;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-links {
     display: flex;
-    align-items: center;
-    justify-content: right;
-    border-radius: 20px;
+    justify-content: center;
+    gap: 10px;
 }
 
-.navbar nav {
+.social-links a {
+    text-decoration: none;
+    color: #333;
     font-size: 24px;
-    margin-right: 30px;
 }
 
-.navbar nav a {
-    margin: 0 15px;
+.nav-bar a {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 5px 15px;
     text-decoration: none;
-    color: black;
+    color: #333;
+    transition: background-color 0.3s, text-decoration 0.3s;
 }
 
-.navbar .nav-icon {
-    margin-right: 5px;
-    vertical-align: middle;
-    text-decoration: none;
-}
-
-
-.navbar nav a:hover ~ .navbar .nav-icon{
+.nav-bar a:hover {
+    background-color: #ddd;
     text-decoration: underline;
-    color: black;
 }
 
-
-.content {
-    flex: 1;
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
 }
 
+h1, .status {
+    text-align: center;
+}
+
+.left-side > *, .right-side > .footer {
+    text-align: center;
+}

@@ -8,11 +8,56 @@
 		<script src="scripts/main.js"></script>
 	</head>
 	<body>
-		<div id="profile" class="profile"></div>
-		<div class="playground">
-			<div id="navigation-bar"></div>
-			<div class="main-content"></div>
-			<div id="mailform" class="form"></div>
+		<div id="left-top-side">
+			<div id="profile"></div>
+		</div>
+		<div id="right-bottom-side">
+			<div id="navbar"></div>
+			<div id="main-area">
+				<main>
+					<h1>Contact Form</h1>
+					<p style="text-align: center;">
+						Thank you for your interest!<br>If you'd like to contact me, please fill out the form below!
+					</p>
+					<br>
+					<form action="#" method="POST">
+						<div>
+						  <label for="name">Name:</label><br>
+						  <input type="text" name="name" placeholder="Ex: John Doe" required>
+						  <br><br>
+					  
+						  <label for="email">Email:</label><br>
+						  <input type="email" name="email" placeholder="example@domain.com" required>
+						  <br><br>
+						  <label for="mobile">Mobile Number:</label><br>
+						  <input type="tel" name="mobile" placeholder="912345678" pattern="([2][0-9]{8}|91[0-9]{7}|92[0-9]{7}|96[0-9]{7}|93[0-9]{7})" required>
+						  <br><br>					  
+						  <p>Select a Subject:</p>
+						  <input type="radio" name="subject" value="general" required> General<br>
+						  <input type="radio" name="subject" value="troubleshooting" required> Troubleshooting<br>
+						  <input type="radio" name="subject" value="support" required> Support<br><br>
+					  
+						  <label for="urgency">Urgency (1 to 10):</label><br>
+						  <input type="range" name="urgency" min="1" max="10" value="5">
+						  <br><br>					  
+						  <label for="languages">Language:</label><br>
+						  <select name="languages">
+							<option value="PT">Portuguese</option>
+							<option value="EN">English</option>
+						  </select>
+						  <br><br>					  
+						  <label for="custom-subject">Custom Subject:</label><br>
+						  <input type="text" name="custom-subject" placeholder="Enter your message subject..." required>
+						  <br><br>					  
+						  <label for="message">Message:</label><br>
+						  <textarea name="message" placeholder="Type your message..." rows="6" cols="40" required></textarea>
+						  <br><br>
+						  <button type="submit">Submit</button>
+						</div>
+					  </form>	  
+				</main>
+			</div>
+			<div id="footer"></div>
 		</div>
 	</body>
 </html>

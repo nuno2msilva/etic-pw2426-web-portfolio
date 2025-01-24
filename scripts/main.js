@@ -7,7 +7,7 @@ async function loadProfile() {
 async function loadNavbar() {
     const response = await fetch("components/navbar.html");
     const navbarHtml = await response.text();
-    document.getElementById("navigation-bar").innerHTML = navbarHtml;
+    document.getElementById("navbar").innerHTML = navbarHtml;
   }
   
   async function loadFooter() {
@@ -16,13 +16,6 @@ async function loadNavbar() {
     document.getElementById("footer").innerHTML = navbarHtml;
   }
 
-  async function loadMailform() {
-    const response = await fetch("components/mailform.html");
-    const mailformHtml = await response.text();
-    document.getElementById("mailform").innerHTML = mailformHtml;
-  }
-  
   loadProfile();
   loadNavbar();
   loadFooter();
-  loadMailform();
